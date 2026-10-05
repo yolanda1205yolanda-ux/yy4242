@@ -1,0 +1,114 @@
+<html>
+
+<head>
+   <title>1005-CSS容器設定</title>
+   <style>
+    /*容器 BOX
+    box -sizing:預設是 content-box，也可以改成 border-box;
+
+    由內而外是 content內容(寬高)/padding補充/border框線/margin邊界
+    除了內容 粗細(wide) 樣式(style) 顏色(color)
+    框線樣式常見有四種 solid實線 dashed虛線 dotted點點 double雙線
+    */
+    #d1{
+        width: 100px;
+        height:100px;
+        background-color: lightgrey;
+        border: 5px solid black;
+        /*border-color: red yellow green blue;
+        border-width: 10px;
+        border-style: solid/dashed/dotted/double;*/
+        padding:10px 50px 30px;
+        box-sizing: content-box;
+        margin-bottom: 20px;
+    }
+    #d2{
+        border:1px solid black;
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    #d3{
+        border: 1px solid black;
+        height: 0px;
+        width:0px;
+        margin: 20px;
+        border-color: red yellow green blue;
+        border-width: 30px 80px 60px 80px ;
+    }
+    #d4{
+        border: 1px solid black;
+        height: 1px;
+        width:180px;
+        margin: 0px;
+        border-color: white white lightblue white;
+        border-width: 0px 10px 30px 10px ;
+        
+    }
+    #d5{
+        border: 1px solid black;
+        height: 0px;
+        width:00px;
+        border-color: lightblue white  ;
+        border-width: 100px 100px 0px 100px ;
+    }
+    #d6{
+        border: 1px solid black;
+        height: 0px;
+        width:0px;
+        margin: 0px;
+        border-color: red transparent green transparent;
+        border-width: 0px 40px 60px 40px ;
+        margin-left: 25px;
+    }
+    #d7{border: 1px solid black;
+        height: 0px;
+        width:50px;
+        margin: 0px;
+        border-color: red white green white;
+        border-width: 0px 40px 60px 40px ;
+        margin-left: 0px;
+
+    }
+    #d8{
+        border: 1px solid black;
+        height: 0px;
+        width:80px;
+        margin: 0px;
+        border-color: red white green white;
+        border-width: 0px 40px 60px 40px ;
+        
+
+    }
+    #d9{
+        height: 40px;
+        width:50px;
+        border-color: brown;
+        margin-left: 40px;
+    }
+
+    
+
+   </style>
+
+   
+</head>
+<body>
+    <div id="d1">內容文字</div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <hr>
+    <div id="d4"></div>
+    <div id="d5"></div>
+
+    <hr>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+
+    
+
+</body>
+</html>
