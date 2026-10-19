@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>1019-變形與轉變</title>
+        <style>
+            div{
+            width: 100px;
+            height: 50px;
+            border: 2px solid black;
+            margin: 50px;
+            display:inline-block
+            }
+            #d1{
+                transform: rotate(45deg);
+            }
+            #d2{
+                transform: rotate(-45deg);
+            }
+            #d3{
+                transform: scale(0.5,1.2);/*倍率*/
+            }
+            #d4{
+                transform: translate(20px,10px);/*位移*/
+            }
+            #d5{
+                transition: tramsfrom 2s;
+            }
+            #d5:hover{
+
+                transform:translate(50px) rotate(45deg);/*先旋轉再位移*/
+            }
+            #d6{
+                transition: transform 2s;
+            }
+            #d6:hover{
+                transform: rotate(45deg) translate(50px);/*先位移再旋轉*/
+            }
+           
+            #d7{
+                background-color: yellow;
+                transition: background-color;
+            }
+             #d7:hover{
+                background-color: red;
+                width: 200px;
+            }
+            #s1{
+                box-shadow:  10px 10px black/*前兩個參數x/y位移*/
+            }
+           #s2{
+            box-shadow: 5px 5px 10px black;/*第三個參數 柔邊程度*/
+           }
+           #s3{
+            box-shadow: 0px 0px 5px 10px black;/*第四個參數 擴大程度*/
+           }
+           #s4{
+            font-size: 100pt;
+            text-shadow: 5px 5px 10px red;
+           }
+           #s5{
+            font-size: 100px;
+            color: white;
+            text-shadow: 0px 0px 10px black;
+           }
+            
+
+        </style>
+    </head>
+    <body>
+    <div id="d1"></div>    
+    <div id="d2"></div>  
+    <div id="d3"></div>  
+    <div id="d4"></div>  
+    <div id="d5"></div> 
+    <div id="d6"></div> 
+    <div id="d7"></div>
+    <hr>
+    <div id="s1"></div>
+    <div id="s2"></div>
+    <div id="s3"></div>
+    <p id="s4">文字</p>
+    <p id="s5">文字</p>
+   
+    
+
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1019-位置與圖層</title>
+        <style>
+            /*position :relative 相對於自己原本的座標
+              position :adsolute 是相對於(有設定position的父容器 或body)的絕對座標
+              可設定 top/left 或 bottom/right
+              z-index 為座標，數字大的在上；數字一樣則是後生成元素在上。
+            */
+            #dad{
+                border: 2px solid black;
+                width: 300px;
+                height: 300px;
+                position:relative;/*相對於自己原來的位置*/
+                top: 20px;
+                left: 20px;
+            }
+            #d1{
+                border: 2px solid red;
+                width: 100px;
+                height: 100px;
+                background-color: hsla(0deg,100%,50%,0.5);/*半透明的紅色*/
+                position:absolute;/*單純為了圖層效果，設定哪個都行*/
+                z-index: 100;
+            }
+            #d2{
+                border: 2px solid blue;
+                width: 100px;
+                height: 100px;
+                position:relative;/*相對於自己原來的位置(在紅色下方)*/
+                top: 0px;
+                left: 0px;
+            }
+            #d3{
+               border: 2px solid green;
+                width: 100px;
+                height: 100px; 
+                background-color: hsla(120deg,100%,50%,1);/*不透明的綠色*/
+                z-index: 90;
+                position:absolute;/*相對於dad的絕對位置*/
+                top: 20px;
+                left: 20px;
+            }
+            #d4{
+                background-color: hsla(60deg,100%,50%,1);
+                width: 100px;
+                height: 100px;
+                position:absolute;/*相對於dad的絕對位置*/
+                left: 10px;
+                bottom: 10px;
+            }
+            #uncle{
+                  border: 2px dashed black;
+                width:100px;
+                height: 100px;
+                 position:absolute;/*相對於body的絕對位置*/
+                top: 20px;
+                left: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="dad">
+            <div id="d1"></div>
+            <div id="d2"></div>
+            <div id="d3"></div>
+            <div id="d4"></div>
+        </div>
+        <div id="uncle"></div>
+
+    </body>
+</html>
