@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1102-JavaScript輸出與輸入</title>
+        <style>
+            /*css*/
+            #ans{
+                width: 300px;
+                height: 100px;
+                background-color: gray;
+            }
+        </style>
+        <script>
+            /*js:javascript 多行註解*/
+            //JS單行註解
+            
+        
+            function say(){
+
+                name = prompt("請問你的名字?");
+              
+                    if(confirm("你確定你叫" + name +"嗎?")){
+                        alert("你好，" + name);
+                    }
+                    else{
+                        alert("請重新打招呼!")
+                    }
+                //console.log("hello")
+               // alert("你好")
+               /*ans = prompt("你叫什麼名字?");
+               console.log(ans + "是" + typeof(ans) + "類型的");
+               得兩種結果:string/null(odject)
+               */
+               /*
+               ans = confirm("你確定嗎?")
+               console.log(ans + "是" + typeof(ans) + "類型的");
+               得兩種結果:ture/false
+               */
+              document.getElementById("ans").innerHTML="hello";
+            }
+            function setVol(){
+                 document.getElementById("vol_num").innerHTML =document.getElementById ("vol_range").value;
+            }
+            function setBGcolor(){
+                document.getElementById("ans").style.backgroundColor = document.getElementById("bgcolor").value;
+            }
+            function add(){
+                n1 = parseInt(document.getElementById("n1").value);
+                n2 = parseInt(document.getElementById("n2").value);
+                document.getElementById("add_ans").innerHTML = (n1 + n2);
+                        }
+        </script>
+    </head>
+    <body>
+        <button onclick="say();">打招呼</button>
+        <div id="ans"></div>
+        <hr>
+        <input type="text" value="text"> <br>
+        <input type="password" value="password"> <br>
+        <input type="number" value="247"> <br>
+        <input type="date" value="2026-11-02"> <br>
+        <input type="datetime-local" value="2026-11-02-02T08:00"> <br>
+        <input type="color" value="#FF0000" id="bgcolor" oninput="setBGcolor();"> <br>
+        <input type="range" id="vol_range" min="1" max="100" value="50" oninput="setVol();"><span id="vol_num"></span><span id="vol_num"></span> 
+        <hr>
+        <input type="number" id="n1"> + <input type="number" id="n2"> <button onclick="add()">等於</button> <span id="add_ans"></span>
+        
+        
+
+    </body>
+</html>
