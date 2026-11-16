@@ -49,9 +49,9 @@
                 
                 setTimeout(clearInterval,3000,
                 setInterval((img)=>{
-                    img.src=`pic/dice${getRamdom(1,6)}.png`;
+                    img.src=`pic/dice${getRandom(1,6)}.png`;
 
-                },50,event.target)
+                },100,event.target)
             );
             }
         </script>
@@ -65,6 +65,6 @@
         <div id="lottery" class="digit">00</div>
         <button onclick="getLottery()">樂透</button>
         <hr>
-        <img src="pic/dice0.png" width="100px" onclick="getDice(this)"
+        <img src="pic/dice0.png" width="100px" onclick="getDice()">
     </body>
 </html>
